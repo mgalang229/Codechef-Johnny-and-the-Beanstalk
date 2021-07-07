@@ -14,6 +14,10 @@ int main() {
 		for (int i = 0; i < k; i++) {
 			cin >> a[i];
 		}
+		// The number of leaves on every level is at most the number of stems 
+		// brought over from the previous level.
+		// The tree will stop growing once there are no more stems. 
+		// At the last level the number of stems is zero (they should all be leaves).
 		int cur = 1;
 		for (int i = 0; i < k; i++) {
 			if (cur < a[i]) {
